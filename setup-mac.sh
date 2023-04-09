@@ -9,11 +9,9 @@ xcode-select --install
 echo "Installing Homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Ensure Homebrew is in the PATH
 (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Update Homebrew
 brew update
 
 # Install essential development tools
@@ -21,19 +19,29 @@ echo "Installing essential development tools..."
 brew install git
 brew install nvm
 brew install zsh
+brew install mas
+
+# Install .NET Core SDK
+echo "Installing .NET Core SDK"
 brew install --cask dotnet-sdk
+
+# Install Visual Studio Code
+echo "Installing Visual Studio Code"
 brew install --cask visual-studio-code
+
+# Install Obsidian
+echo "Installing Obsidian"
 brew install --cask obsidian
+
+# Install Iterm2
+echo "Installing Iterm2"
 brew install --cask iterm2
+brew install --cask github
 
 # Install oh-my-zsh
 echo "Installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 cat aliases.zsh >> ~/.oh-my-zsh/custom/aliases.zsh
-
-# Install mas CLI (Mac App Store)
-echo "Installing mas CLI..."
-brew install mas
 
 # Install Xcode
 echo "Installing Xcode..."
