@@ -20,6 +20,7 @@ brew install git
 brew install nvm
 brew install zsh
 brew install mas
+brew install angular-cli
 brew install nvm
 
 export NVM_DIR="$HOME/.nvm"
@@ -42,6 +43,10 @@ brew install --cask obsidian
 echo "Installing Iterm2"
 brew install --cask iterm2
 brew install --cask github
+
+# Install Insomnia
+echo "Installing Insomnia"
+brew install --cask insomnia
 
 # Install oh-my-zsh
 echo "Installing oh-my-zsh"
